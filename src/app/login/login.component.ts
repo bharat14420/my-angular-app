@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
       this.authService.decodeToken(token);
     });
   }
+
   toggle() {
     console.log(this.myInput.nativeElement.type);
     if (this.myInput.nativeElement.type == 'password') {
@@ -31,6 +32,4 @@ export class LoginComponent implements OnInit {
       this.myInput.nativeElement.type = 'password';
     }
   }
-
- 
 }
