@@ -1,0 +1,12 @@
+<header class="mat-elevation-z2">
+  <ng-container *ngIf="authService.isLoggedIn">
+    <app-side-navbar style="margin-right: 25px;"></app-side-navbar>
+  </ng-container>
+  <span class="header-title">My Angular App</span>
+  <span class="header-buttons">
+      <button class="login-button" *ngIf="!authService.isLoggedIn" mat-button
+        color="primary" routerLink="/login">Login</button>
+      <button class="logout-button" *ngIf="authService.isLoggedIn" mat-button
+        color="warn" (click)="logout()">Logout</button>
+  </span>
+</header>

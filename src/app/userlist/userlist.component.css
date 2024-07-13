@@ -1,0 +1,46 @@
+/* Target the mat-table */
+table.mat-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Header cells */
+  th.mat-header-cell {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Data cells */
+  td.mat-cell {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  /* Input fields within cells */
+  input.mat-input {
+    width: 100%; /* Full width of the cell */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+  }
+  
+  /* Button style */
+  button.mat-icon-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Icon inside the button */
+  button.mat-icon-button mat-icon {
+    font-size: 18px;
+  }
+
+
+  .mat-row:hover {
+    background-color: #817e7e; /* Change to your desired hover color */
+  }
+  
+  .deleteIcon{
+    color: rebeccapurple;
+  }

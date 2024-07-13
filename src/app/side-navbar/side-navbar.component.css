@@ -1,0 +1,46 @@
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initial position off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 50px;
+    transition: left 0.1s ease; /* Smooth animation */
+  }
+  
+  .side-navbar.open {
+    left: 0; /* Visible position */
+  }
+  
+  .side-navbar a {
+    display: block;
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    transition: background-color 0.1s ease;
+  }
+  
+  .side-navbar a:hover {
+    background-color: #111; 
+  }
+  
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .close-btn mat-icon {
+    font-size: 24px;
+  }
+  /* Global styles.css */
+.active {
+  background-color: rgb(0, 0, 0); /* Change text color */
+  
+} 
+

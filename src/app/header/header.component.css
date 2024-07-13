@@ -1,0 +1,75 @@
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .header-buttons {
+    margin-left: auto;
+  }
+  
+  header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    width: -webkit-fill-available;
+    height: 42px;
+    margin-bottom: 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul li a.active {
+    font-weight: bold;
+  }
+  
+.header {
+  display: flex;
+  justify-content: space-between; /* Align items with space in-between */
+  align-items: center; /* Center items vertically */
+  padding: 10px 20px; /* Padding for the header */
+  background-color: #333; /* Example background color */
+  color: white; /* Text color */
+  width: -webkit-fill-available;
+}
+
+.login-container {
+  display: flex; /* Use flexbox for login buttons */
+  align-items: center; /* Center items vertically */
+}
+
+.login-button, .logout-button {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* No border */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* No underline */
+  font-size: 16px; /* Font size */
+  margin-left: 10px; /* Space between buttons */
+  cursor: pointer; /* Cursor pointer */
+  border-radius: 4px; /* Rounded corners */
+  background-color: orange; /* Darker green background on hover */
+  float: right;
+}
+
+.login-button:hover, .logout-button:hover {
+  background-color: rgb(214, 124, 7); /* Darker green background on hover */
+}

@@ -1,0 +1,19 @@
+<div  class="container">
+    <img src="../../assets/DarkSoul.png" >
+</div>
+<img src="https://darksoul-git.github.io/Naruto-Login-Template/DarkSoul%20-%20%20naruto%20sign1.png" alt="darksoul-naruto-sign1" class="naruto-sign2" /> 
+<img src="https://darksoul-git.github.io/Naruto-Login-Template/DarkSoul%20-%20naruto%20sign2.png" alt="darksoul-naruto-sign2" class="naruto-sign1" /> 
+<div class="darksoul-container">
+    <div class="square"><h1>Login</h1></div>
+    <form class="f-col m-auto form-container" action="" method="post">
+        <label class="mb-10">Email</label>
+        <input class="darksoul-input" type="email" name="email" required [(ngModel)]="email">
+        <label class="mb-10 mt-20">Password</label>
+        <div class="darksoul-password f-row">
+            <input class="m-auto darksoul-input" #myInput name="password" id="password" required [(ngModel)]="password" >
+            <img class="m-auto eye-icon" width="18" height="18" src="https://img.icons8.com/fluency-systems-filled/48/FD7E14/visible.png" alt="visible" (click)="toggle()"/>
+        </div>
+        
+        <button class="mt-40 m-auto darksoul-hover-fill-button" type="button" (click)="login()"><div class="color-fill"></div><p>Login</p></button>
+    </form>
+</div>
