@@ -31,6 +31,4 @@ export class LoginComponent implements OnInit {
       this.myInput.nativeElement.type = 'password';
     }
   }
-
- 
 }
