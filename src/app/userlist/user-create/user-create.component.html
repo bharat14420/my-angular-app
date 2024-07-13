@@ -1,0 +1,16 @@
+
+<form (submit)="submitForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="formData.fullName" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
+
+    <label for="phone">Phone:</label>
+    <input type="phone" id="phone" name="phone" [(ngModel)]="formData.phone" required>
+
+    <label for="address">Address:</label>
+    <input type="address" id="address" name="address" [(ngModel)]="formData.address" required>
+    
+    <button type="submit">Submit</button>
+  </form>

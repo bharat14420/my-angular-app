@@ -1,0 +1,29 @@
+.welcome {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .welcome h1 {
+    font-size: 36px;
+  }
+  
+  .welcome p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .welcome ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .welcome ul li {
+    margin-bottom: 10px;
+  }
+  
+  .welcome ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  

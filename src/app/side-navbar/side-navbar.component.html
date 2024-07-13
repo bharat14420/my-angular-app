@@ -1,0 +1,15 @@
+<div class="side-navbar" [ngClass]="{'open': isSidebarOpen}">
+  <a [routerLink]="['/home']" [routerLinkActive]="'active'" fragment="box4"
+    (click)="toggleSidebar()">Home</a>
+  <a routerLink="/users" [routerLinkActive]="'active'"
+    (click)="toggleSidebar()">Users</a>
+  <a routerLink="/createUser" [routerLinkActive]="'active'"
+    (click)="toggleSidebar()" *ngIf="authService.isLoggedIn">AddUser</a>
+  <a class="close-btn" (click)="toggleSidebar()">
+    <mat-icon>close</mat-icon>
+  </a>
+</div>
+
+<a (click)="toggleSidebar()">
+  <mat-icon>list</mat-icon>
+</a>
