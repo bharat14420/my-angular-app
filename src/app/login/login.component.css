@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Rubik+Vinyl&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-body
-{
+
+body {
     margin: 0;
     width: 100vw;
     height: 100vh;
@@ -13,64 +12,36 @@ body
     background-repeat: no-repeat;
     background-size: cover;
 }
-.f-col
-{
+
+.f-col, .f-row {
     display: flex;
+}
+.f-col {
     flex-direction: column;
 }
-.f-row
-{
-    display: flex;
-}
-.m-auto
-{
+.m-auto {
     margin: auto;
 }
-.mt-10
-{
-    margin-top: 10px;
-}
-.mt-20
-{
-    margin-top: 20px;
-}
-.mt-30
-{
-    margin-top: 30px;
-}
-.mt-40
-{
-    margin-top: 40px;
-}
-.mb-10
-{
-    margin-bottom: 10px;
-}
-.mb-20
-{
-    margin-bottom: 20px;
-}
-.mb-30
-{
-    margin-bottom: 10px;
-}
-.mb-40
-{
-    margin-bottom: 20px;
-}
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mt-40 { margin-top: 40px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-40 { margin-bottom: 40px; }
 
-.darksoul-container
-{
+.darksoul-container {
     width: 500px;
     height: 400px;
     margin: auto;
     display: flex;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 1px 1px 20px rgb(228, 228, 228);
+    background-color: #fff;
+    box-shadow: 1px 1px 20px #e4e4e4;
     border-radius: 25px;
 }
-.square
-{
+
+.square {
     width: 200px;
     height: 200px;
     background-color: orange;
@@ -80,13 +51,12 @@ body
     margin-left: -50px;
     border-radius: 25px;
 }
-.square h1
-{
+.square h1 {
     text-align: center;
     color: white;
 }
-.darksoul-hover-fill-button
-{
+
+.darksoul-hover-fill-button {
     display: flex;
     width: 100px;
     height: 40px;
@@ -98,50 +68,39 @@ body
     cursor: pointer;
     align-items: center;
     justify-content: left;
- 
-} 
-.color-fill
-{
+}
+.color-fill {
     position: absolute;
     margin-left: -7px;
     width: 100px;
     height: 1px;
     background-color: orange;
     visibility: hidden;
-} 
-.darksoul-hover-fill-button:hover .color-fill
-{
+}
+.darksoul-hover-fill-button:hover .color-fill {
     visibility: visible;
-    width: 100px;
     height: 40px;
-    border-radius: 5px;
     transition: all 0.5s;
-    background-color: orange;
-}   
-.darksoul-hover-fill-button:hover
-{
+}
+.darksoul-hover-fill-button:hover {
     box-shadow: 1px 1px 20px orange;
     transition: all 1s;
-} 
-.darksoul-hover-fill-button:hover p
-{
+}
+.darksoul-hover-fill-button:hover p {
     color: white;
     transition: all 0.3s;
-} 
-.darksoul-hover-fill-button p
-{
+}
+.darksoul-hover-fill-button p {
     margin: auto;
     font-size: larger;
     z-index: 10;
-} 
+}
 
-.form-container
-{
+.form-container {
     margin-right: 50px;
     width: 50%;
 }
-.darksoul-input
-{
+.darksoul-input {
     all: unset;
     border-bottom: 1px solid rgba(0, 0, 0, 0.259);
     padding-bottom: 5px;
@@ -151,82 +110,54 @@ body
     width: 90%;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active
-{
-    -webkit-box-shadow: 0 0 0 30px white inset !important;  
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
-.darksoul-password
-{
+.darksoul-password {
     width: 100%;
 }
-.darksoul-password:hover .eye-icon
-{
+.darksoul-password:hover .eye-icon {
     visibility: visible;
 }
-.eye-icon
-{
+.eye-icon {
     visibility: hidden;
     z-index: 100;
     margin-left: 10px;
 }
-.eye-icon:hover
-{
+.eye-icon:hover {
     cursor: pointer;
 }
-.naruto-sign1
-{
+
+.naruto-sign1 {
     width: 150px;
     height: 150px;
     position: absolute;
-    margin-bottom: auto;
     bottom: 50px;
-    margin-left: auto;
     left: 100px;
     transform: rotateZ(0deg);
-    animation-name: sign1-animate;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: sign1-animate 2s infinite linear;
 }
-
-.naruto-sign2
-{
+.naruto-sign2 {
     width: 150px;
     height: 150px;
     position: absolute;
-    margin-top: auto;
     top: 50px;
-    margin-right: auto;
     right: 100px;
     transform: rotateZ(0deg);
-    animation-name: sign2-animate;
-    animation-duration: 0.1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: sign2-animate 0.1s infinite linear;
 }
 
-@keyframes sign1-animate
-{
-    0%{ transform: rotateZ(0deg);}
-    50%{transform: rotateZ(50deg);}
-    100%{ transform: rotateZ(0deg);}
+@keyframes sign1-animate {
+    0% { transform: rotateZ(0deg); }
+    50% { transform: rotateZ(50deg); }
+    100% { transform: rotateZ(0deg); }
+}
+@keyframes sign2-animate {
+    100% { transform: rotateZ(360deg); }
 }
 
-@keyframes sign2-animate
-{
-    0%{ }
-    100%{transform: rotateZ(360deg);}
-}
-
-
-
-@media only screen and (max-width: 700px) 
-{
-    body    
-    {
+@media only screen and (max-width: 700px) {
+    body {
         margin: 0;
         width: 100vw;
         height: 100vh;
@@ -238,105 +169,64 @@ input:-webkit-autofill:active
         background-size: cover;
         overflow: hidden;
     }
-    .darksoul-container
-    {
+    .darksoul-container {
         width: 80%;
         height: 350px;
         margin: auto;
         display: flex;
         flex-direction: column;
-        background-color: rgb(255, 255, 255);
-        box-shadow: 1px 1px 20px rgb(228, 228, 228);
+        background-color: #fff;
+        box-shadow: 1px 1px 20px #e4e4e4;
         border-radius: 25px;
     }
-    .square
-    {
+    .square {
         width: 150px;
         height: 150px;
-        background-color: orange;
-        box-shadow: 1px 1px 20px orange;
-        z-index: 100;
-        margin: auto;
         margin-top: -50px;
-        border-radius: 25px;
     }
-    .form-container
-    {
-        margin: auto;
+    .form-container {
         width: 80%;
         height: 50%;
     }
-    .darksoul-hover-fill-button
-    {
+    .darksoul-hover-fill-button {
         margin: auto;
         margin-top: 20px;
-        display: flex;
-        width: 100px;
-        height: 40px;
-        border-radius: 5px;
-        outline: none;
-        border: 1px solid orange;
-        background-color: white;
-        font-family: 'Belanosima', sans-serif;
-        cursor: pointer;
-        align-items: center;
-        justify-content: left;
-    
-    } 
-    .naruto-sign1
-    {
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        margin-bottom: auto;
-        bottom: 20px;
-        margin-left: auto;
-        left: 20px;
-        transform: rotateZ(0deg);
-        
     }
-    .naruto-sign2
-    {
+    .naruto-sign1 {
         width: 100px;
         height: 100px;
-        position: absolute;
-        margin-top: auto;
+        bottom: 20px;
+        left: 20px;
+    }
+    .naruto-sign2 {
+        width: 100px;
+        height: 100px;
         top: 20px;
-        margin-right: auto;
         right: 10px;
-        transform: rotateZ(0deg);
-        animation-name: sign2-animate;
-        animation-duration: 0.1s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
     }
 }
 
-.disclaimer
-{
+.disclaimer {
     position: absolute;
-    bottom: 0px; 
-    left: 0; 
-    margin-left: auto; 
-    right: 0; 
-    margin-right: auto; 
+    bottom: 0px;
+    left: 0;
+    right: 0;
     width: fit-content;
-    color: rgb(0, 0, 0);
+    margin: auto;
+    color: #000;
     text-align: center;
 }
-.disclaimer a
-{
+.disclaimer a {
     text-decoration: none;
     color: #202020;
     font-family: "Kaushan Script", cursive;
     font-weight: 900;
 }
-.disclaimer a:hover
-{
+.disclaimer a:hover {
     text-decoration: overline;
 }
 
-.container{
+.container {
     background-repeat: no-repeat;
     position: fixed;
     z-index: -1;
