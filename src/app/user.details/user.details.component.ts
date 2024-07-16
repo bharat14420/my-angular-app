@@ -17,7 +17,8 @@ export class UserDetailsComponent implements OnInit {
     fullName : '',
     email : '',
     phone : '',
-    address : ''
+    address : '',
+    password : ''
   };
 
   ngOnInit(): void {

@@ -5,6 +5,8 @@
     (click)="toggleSidebar()">Users</a>
   <a routerLink="/createUser" [routerLinkActive]="'active'"
     (click)="toggleSidebar()" *ngIf="authService.isLoggedIn">AddUser</a>
+  <a routerLink="/form" [routerLinkActive]="'active'"
+    (click)="toggleSidebar()" *ngIf="authService.isLoggedIn">Form</a>
   <a class="close-btn" (click)="toggleSidebar()">
     <mat-icon>close</mat-icon>
   </a>

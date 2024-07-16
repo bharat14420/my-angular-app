@@ -28,7 +28,7 @@ export class AppComponent implements DoCheck , OnChanges {
       });
   }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log("ngonChanges" , changes)
+    // console.log("ngonChanges" , changes)
   }
 
 
@@ -66,7 +66,7 @@ export class AppComponent implements DoCheck , OnChanges {
   }
 
   ngDoCheck(){
-    console.log("ngdochanges" )
+    // console.log("ngdochanges" )
   }
 
 }
