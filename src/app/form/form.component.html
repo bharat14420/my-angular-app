@@ -1,0 +1,72 @@
+<div class="body">
+    <div class="container">
+        <div class="sign-up-form">
+            <form class="form-content" [formGroup]="formGroup">
+                <!-- Form Heading -->
+                <div class="form-heading">
+                    <h1>Create Account</h1>
+                    <p>Please fill out all the required fields to create your
+                        account!</p>
+                </div>
+                <div class="input-wrap">
+                    <div class="input">
+                        <input type="text" 
+                            placeholder="" formControlName="name" />
+                        <div class="label">
+                            <label for="username">Username</label>
+                        </div>
+                        <span style="color: red;font-size: small;"
+                        *ngIf="formGroup.get('name')?.errors && formGroup.get('name')?.touched">
+                        Name must be required </span>
+                    </div>
+                    <div class="input">
+                        <input type="text" id="confirmPassword"
+                            placeholder=" " formControlName="email"/>
+                        <div class="label">
+                            <label for="email">Email</label>
+                        </div>
+                        <div>
+                        <span style="color: red;font-size: small;"
+                        *ngIf="formGroup.get('email')?.errors?.['required'] && formGroup.get('email')?.touched">
+                        Email must be required </span>
+                        </div>
+                        <div>
+                            <span style="color: red;font-size: small;"
+                            *ngIf="formGroup.get('email')?.errors?.['email'] && formGroup.get('email')?.touched">
+                            Enter valid email </span>
+                            </div>
+                    </div>
+                    <div class="input">
+                        <input type="password" id="password" placeholder=" "  formControlName="password"/>
+                        <div class="label">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <input type="password" formControlName="confirmPassword"
+                            placeholder=" " />
+                        <div class="label">
+                            <label for="confirmPassword">Confirm Password
+                            </label>
+                            <div>
+                                <span style="color: red;font-size: small;"
+                                *ngIf="onConfirmPassword()">
+                                Confirm Password Not Matched withPassword. </span>
+                                </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="Address">Address
+                        </label>
+                    </div>
+
+
+                    <button type="submit" (click)="onSubmit()"
+                        [disabled]="formGroup.invalid || onConfirmPassword()">Create
+                        Account</button>
+                </div>
+            </form>
+            {{value}}
+        </div>
+    </div>
+</div>

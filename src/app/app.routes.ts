@@ -7,6 +7,7 @@ import { UserCreateComponent } from './userlist/user-create/user-create.componen
 import { UserDetailsComponent } from './user.details/user.details.component';
 import { UserRoleGuard } from './user-role-guard';
 import { LoginComponent } from './login/login.component';
+import { FormComponent } from './form/form.component';
 
 
 // Define your routes array
@@ -15,6 +16,7 @@ export const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: WelcomePageComponent, pathMatch: 'full' },
   { path: 'users', component: UserlistComponent },
+  { path: 'form', component: FormComponent },
   { path: 'createUser', component: UserCreateComponent , canActivate : [UserRoleGuard]},
   { path: 'GetUser/:id', component: UserDetailsComponent }
 ];

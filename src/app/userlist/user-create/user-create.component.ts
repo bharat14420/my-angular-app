@@ -13,7 +13,8 @@ export class UserCreateComponent implements OnInit {
     fullName : '',
     email : '',
     phone : '',
-    address : ''
+    address : '',
+    passwordHash : ''
   };
 
   constructor(private service : ApiService) { }

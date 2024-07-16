@@ -15,6 +15,7 @@ export class SideNavbarComponent implements OnInit {
   }
 
   toggleSidebar() {
+    console.log(this.isSidebarOpen,"side")
     this.isSidebarOpen = !this.isSidebarOpen;
   }
 }

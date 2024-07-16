@@ -22,6 +22,8 @@ import { UserDetailsComponent } from './user.details/user.details.component';
 import { UserRoleGuard } from './user-role-guard';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { LoginComponent } from './login/login.component';
     WelcomePageComponent,
     UserDetailsComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -46,9 +49,8 @@ import { LoginComponent } from './login/login.component';
     MatPaginatorModule,
     MatSortModule,
     MatIconModule,
-    RouterModule.forRoot(appRoutes) // Configure routes here,
-    
-     
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule
   ],
   providers: [
     UserRoleGuard
