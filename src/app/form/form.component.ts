@@ -1,5 +1,5 @@
 import { Component, DoCheck, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -10,7 +10,7 @@ export class FormComponent implements OnInit, DoCheck, OnChanges{
 
   value:any=''
   
-  constructor(private fomBuilder:FormBuilder) {
+  constructor(private fomBuilder:UntypedFormBuilder) {
     this.fomBuilder.group(this.formGroup);
    }
   ngOnChanges(changes: SimpleChanges): void {
@@ -22,17 +22,17 @@ export class FormComponent implements OnInit, DoCheck, OnChanges{
 
   
   
-  formGroup = new FormGroup({
-    email: new FormControl('',[Validators.email,Validators.required]),
-    name : new FormControl('',[Validators.required]),
-    password: new FormControl('',[Validators.required]),
-    confirmPassword : new FormControl('',[Validators.required]),
-    address: new FormGroup({
-      houseNo: new FormControl(),
-      street: new FormControl(),
-      area: new FormControl(),
-      city: new FormControl(),
-      state: new FormControl()
+  formGroup = new UntypedFormGroup({
+    email: new UntypedFormControl('',[Validators.email,Validators.required]),
+    name : new UntypedFormControl('',[Validators.required]),
+    password: new UntypedFormControl('',[Validators.required]),
+    confirmPassword : new UntypedFormControl('',[Validators.required]),
+    address: new UntypedFormGroup({
+      houseNo: new UntypedFormControl(),
+      street: new UntypedFormControl(),
+      area: new UntypedFormControl(),
+      city: new UntypedFormControl(),
+      state: new UntypedFormControl()
     }),
     
   })
